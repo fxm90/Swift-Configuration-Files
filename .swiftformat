@@ -11,6 +11,11 @@
 #
 
 #
+# File options
+#
+--exclude Pods,Generated
+
+#
 # Rules
 #
 --disable andOperator
