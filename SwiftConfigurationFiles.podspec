@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.author           = { 'Felix Mau' => 'me@felix.hamburg' }
   s.source           = { :git => 'https://github.com/fxm90/Swift-Configuration-Files.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/_fxm90'
-  s.source_files     = '.*'
+  s.source_files     = ''
 
 end
