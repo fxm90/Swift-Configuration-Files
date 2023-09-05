@@ -12,7 +12,8 @@
 #
 
 opt_in_rules:
-  - anyobject_protocol                  # Prefer using `AnyObject` over class for class-only protocols.
+  - accessibility_label_for_image       # Images that provide context should have an accessibility label or should be explicitly hidden from accessibility
+  - accessibility_trait_for_button      # All views with tap gestures added should include the .isButton or the .isLink accessibility traits
   - array_init                          # Prefer using `Array(seq)` over `seq.map { $0 }` to convert a sequence into an Array.
   - balanced_xctest_lifecycle           # Test classes must implement balanced setUp and tearDown methods.
   - block_based_kvo                     # Prefer the new block based KVO API with keypaths when using Swift 3.2 or later.
@@ -54,11 +55,17 @@ opt_in_rules:
   - sorted_first_last                   # Prefer using `min()` or `max()` over `sorted().first` or `sorted().last`
   - toggle_bool                         # Prefer `someBool.toggle()` over `someBool = !someBool`.
   - unavailable_function                # Unimplemented functions should be marked as unavailable.
-  - unused_import                       # All imported modules should be required to make the file compile.
   - unused_optional_binding             # Prefer `!= nil` over `let _ =`
-  - unused_declaration                  # Declarations should be referenced at least once within all files linted.
   - void_return                         # Prefer `-> Void` over `-> ()`.
+  - weak_delegate                       # Delegates should be weak to avoid reference cycles
 
+
+#
+# Rules run by `swiftlint analyze`
+#
+analyzer_rules:
+  - unused_import                       # All imported modules should be required to make the file compile.
+  - unused_declaration                  # Declarations should be referenced at least once within all files linted.
 
 file_header:
   required_pattern: |

@@ -28,6 +28,7 @@
 #
 # Rule Configuration
 #
---wraparguments "after-first"
+--wraparguments "before-first"
 --wrapcollections "before-first"
+--wrapparameters "before-first"
 --importgrouping testable-last
